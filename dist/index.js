@@ -9,5 +9,5 @@ Object.defineProperty(exports, "Slider", {
     return _slider.default;
   }
 });
-var _slider = _interopRequireDefault(require("../components/slider"));
+var _slider = _interopRequireDefault(require("./components/slider"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }

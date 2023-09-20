@@ -2,21 +2,12 @@
   "name": "simpleflix-slider",
   "description": "A simple take on Netflix's slider",
   "author": "LuisLeandro94",
-  "keywords": [
-    "react",
-    "components",
-    "ui",
-    "netflix",
-    "slider"
-  ],
-  "version": "0.4.0",
+  "keywords": ["react", "components", "ui", "netflix", "slider"],
+  "version": "0.1.0",
   "private": false,
   "main": "dist/index.js",
   "module": "dist/index.js",
-  "files": [
-    "dist",
-    "README.md"
-  ],
+  "files": ["dist", "README.md"],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/LuisLeandro94/Simpleflix-Slider.git"

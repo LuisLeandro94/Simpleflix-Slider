@@ -1,70 +1,62 @@
-# Getting Started with Create React App
+# Simpleflix Slider
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A simple animated slider component for React.
 
-## Available Scripts
+## Installation
 
-In the project directory, you can run:
+`
+$ npm install simpleflix-slider --save
+`
 
-### `npm start`
+## Usage
+All that you need:
+```javascript
+import data from './Data.json'
+import { Slider } from 'simpleflix-slider'
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+function App() {
+    return (
+        <Slider slidesToShow={5} slides={data} />
+    )
+}
+```
+> SliderContainer.js
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+```javascript
+[
+    {
+        images: {
+            jpg: {
+                large_image_url: "https:\/\/cdn.myanimelist.net\/images\/anime\/1208\/94745l.jpg"
+            }
+        },
+        trailer: {
+            embed_url: "https://www.youtube.com/embed/--IcmZkvL0Q?enablejsapi=1&wmode=opaque&autoplay=1"
+        },
+        title: "Fullmetal Alchemist: Brotherhood",
+        score: 9.06,
+        rating: "R - 17+ (violence & profanity)",
+        episodes: 64
+    }
+]
+```
+> Data.json
 
-### `npm test`
+## Props
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+| Name | Type | Required | Description |
+| ---- | ---- | -------- | ----------- |
+| slidesToShow | number | true | Number of slides to show in the slider |
+| data | array of objects | true | slider data |
 
-### `npm run build`
+## Screenshot 
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+![Simpleflix-Slider screenshot](./public//screenshot.jpg)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Disclaimer
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+This component is not official nor supported by Netflix. The trademark "Netflix" is registered by "Netflix, Inc."
 
-### `npm run eject`
+## License 
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Apache 2.0
