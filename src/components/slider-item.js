@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import ReactPlayer from 'react-player/youtube';
 import {
   Episodes,
   Info,
@@ -12,7 +13,9 @@ import {
 
 const SliderItem = ({ item }) => {
   const [hovered, setHovered] = useState(false);
+  const [isPlaying, setPlaying] = useState(false);
   const toggleHover = () => setHovered(!hovered);
+  const togglePlaying = () => setPlaying(!isPlaying);
 
   return (
     <ItemContainer
@@ -26,10 +29,15 @@ const SliderItem = ({ item }) => {
         }></ItemImage>
       <ItemVideo
         className={hovered && item?.trailer?.embed_url ? 'hovered' : ''}>
-        <iframe
-          src={item?.trailer?.embed_url}
-          title={item?.title}
-          allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; loop'
+        <ReactPlayer
+          url={item?.trailer?.embed_url}
+          width={'100%'}
+          height={'100%'}
+          muted
+          playing={isPlaying}
+          loop
+          onMouseEnter={togglePlaying}
+          onMouseLeave={togglePlaying}
         />
       </ItemVideo>
       <ItemDataContainer>
